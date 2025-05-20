@@ -5,8 +5,11 @@ import logo from '../assets/vpnHeadLogo.png';
 const Home = () => {
   return (
     <div className="home-container">
+
       <header className="header">
+        
         <img src={logo} alt="VPN Logo" className="logo" />
+
         <nav className="nav-menu">
           <ul>
             <li>Home</li>
@@ -14,6 +17,7 @@ const Home = () => {
             <li>About</li>
           </ul>
         </nav>
+
       </header>
 
       <main className="main-content">
