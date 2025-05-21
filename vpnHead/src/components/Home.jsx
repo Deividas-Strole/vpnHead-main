@@ -55,7 +55,8 @@ const Home = () => {
 <div className="where-get-vpn-content">
         <h1 className="headline">Where do You Get VPN?</h1>
         <p> We highly reccomend Surfshark - best service for $1.99 per month!!! </p>
-        <img src={surfshark} alt="SurfShark" className="surfshark-image" />
+        <a href="https://get.surfshark.net/aff_c?offer_id=926&aff_id=38520" target="_blank" rel="noopener noreferrer">
+        <img src={surfshark} alt="SurfShark" className="surfshark-image" /> </a>
 </div>
 
 <div className="articles-content">
