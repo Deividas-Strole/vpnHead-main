@@ -3,6 +3,8 @@ import '../css/Home.css';
 import logo from '../assets/vpnHeadLogo.png';
 import whatIsVPN from '../assets/whatIsVpn.png';
 import RedBox from './VpnRedBox';
+import surfshark from '../assets/surfshark.jpg';
+import Slider from './Slider';
 
 const Home = () => {
   return (
@@ -52,8 +54,15 @@ const Home = () => {
 
 <div className="where-get-vpn-content">
         <h1 className="headline">Where do You Get VPN?</h1>
-        
+        <p> We highly reccomend Surfshark - best service for $1.99 per month!!! </p>
+        <img src={surfshark} alt="SurfShark" className="surfshark-image" />
 </div>
+
+<div className="articles-content">
+  <h1 className="headline">Articles</h1>
+  <Slider />
+  </div>
+
 </div>
   );
 };
