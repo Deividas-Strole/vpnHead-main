@@ -1,0 +1,18 @@
+.red-box {
+  border: 10px solid #E13C35;
+  padding: 16px;
+  border-radius: 8px;
+  color: #333;
+  max-width: 400px;
+  margin: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.red-box-image {
+  width: 100%;         /* Adjust as needed */
+  height: auto;
+  margin-bottom: 16px; /* Space between image and text */
+}

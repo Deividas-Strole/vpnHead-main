@@ -1,36 +1,59 @@
-
-html, body, #root {
-  height: 100%;
+/* Reset for the entire document */
+* {
   margin: 0;
   padding: 0;
-}
-
-/* Your container fills the viewport */
-.home-container {
-  min-height: 100vh; 
-  width: 100%;
   box-sizing: border-box;
 }
 
+/* Make sure HTML and body take full viewport */
+html, body {
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden;  */
+}
 
-/* Header styling */
-.header {
+/* Target your React root element */
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.home-container {
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.header-container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%; /* Viewport width */
+  /* height: 100vh; */
+  /* position: absolute;  */
+  top: 0;
+  left: 0;
+}
+
+.logo-container {
+  padding: 20px; /* Add some padding for visibility */
+}
+
+.menu-container {
+  padding: 30px; /* Add some padding for visibility */
 }
 
 /* Logo styling */
 .logo {
-  height: 50px;
+  height: 100px;
 }
 
 /* Menu styling */
 .nav-menu ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 260px;
   margin: 0;
   padding: 0;
 }
@@ -38,25 +61,64 @@ html, body, #root {
 .nav-menu li {
   cursor: pointer;
   font-weight: bold;
+  font-size: 1.50rem;        /* ✅ Increase font size (20px) */
+  font-family: sans-serif;   /* ✅ Use sans-serif font */
+}
+
+.headline {
+  color: #43A260;
+  font-size: 2.5rem;
+  /* margin-bottom: 40px; */
+  padding: 4%;
 }
 
 /* Main content area */
-.main-content {
+.what-is-vpn-content {
   text-align: center;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5%;
+  font-size: 1.50rem;        /* ✅ Increase font size (20px) */
+  font-family: sans-serif;   /* ✅ Use sans-serif font */
+  max-width: 66.6667%;  /* ✅ Limit width to 2/3 of screen */
+  margin: 0 auto;       /* ✅ Center horizontally */
 }
 
-.headline {
-  color: #43A260;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+.heading-text {
+  text-align: center;
+  color: #E13C35;
+  padding-top: 5%;
 }
 
-.main-image {
-  width: 300px;
+.whatIsVPN-image {
+  max-width: 100%;
   height: auto;
+  width: 500px; /* or set height: 300px; depending on your layout */
+  margin: 10px 0;
 }
+
+.why-you-need-vpn-content {
+  text-align: center;
+}
+
+.red-box-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.red-box-row > * {
+  flex: 1 1 calc(33.33% - 20px); /* 3 items per row with space for gap */
+  max-width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+
+.where-get-vpn-content {
+  text-align: center;
+}
+
