@@ -1,0 +1,52 @@
+.slider-container {
+  position: relative;
+  width: 800px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 33.333%;
+  padding: 0 10px; /* horizontal padding for spacing */
+  box-sizing: border-box;
+}
+
+.slide > * {
+  background-color: #007bff;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.arrow {
+  background-color: #ddd;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.arrow:hover {
+  background-color: #bbb;
+}
+
+.left {
+  margin-right: 10px;
+}
+
+.right {
+  margin-left: 10px;
+}

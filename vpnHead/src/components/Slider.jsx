@@ -1,52 +1,55 @@
-// Slider.jsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
+import "../css/Slider.css";
+import ArticalSliderBox from "./ArticalSliderBox";
 
-const slides = [
-  { id: 1, content: 'Slide 1: Welcome to the Slider!' },
-  { id: 2, content: 'Slide 2: React is awesome!' },
-  { id: 3, content: 'Slide 3: You can customize me!' },
+const texts = [
+  "Privacy from Snooping Eyes",
+  "Privacy from Snooping rrrr",
+  "Privacy from Snooping uuuu",
+  // add more here
 ];
 
+const items = texts.map((text, i) => (
+  <ArticalSliderBox text={text} key={i} />
+));
+
+
 export default function Slider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
 
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
+  const nextSlide = () => {
+    setStartIndex((prev) => (prev + 1) % items.length);
   };
 
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
+  const prevSlide = () => {
+    setStartIndex((prev) => (prev - 1 + items.length) % items.length);
   };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const visibleItems = [];
+  for (let i = 0; i < 3; i++) {
+    visibleItems.push(items[(startIndex + i) % items.length]);
+  }
 
   return (
-    <div style={styles.container}>
-      <button onClick={goToPrevious} style={styles.button}>←</button>
-      <div style={styles.slide}>{slides[currentIndex].content}</div>
-      <button onClick={goToNext} style={styles.button}>→</button>
+    <div className="slider-container">
+      <button className="arrow left" onClick={prevSlide}>
+        &#8249;
+      </button>
+      <div className="slider">
+        {visibleItems.map((item, index) => (
+          <div className="slide" key={index}>
+            {item}
+          </div>
+        ))}
+      </div>
+      <button className="arrow right" onClick={nextSlide}>
+        &#8250;
+      </button>
     </div>
   );
 }
-
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: '10px',
-    padding: '20px',
-    border: '2px solid #ccc',
-    borderRadius: '10px',
-    maxWidth: '500px',
-    margin: '20px auto',
-    fontSize: '20px',
-    backgroundColor: '#f9f9f9',
-  },
-  slide: {
-    minWidth: '300px',
-    textAlign: 'center',
-  },
-  button: {
-    fontSize: '24px',
-    cursor: 'pointer',
-  },
-};
