@@ -1,15 +1,19 @@
 .slider-container {
   position: relative;
-  width: 800px;
+  width: 1000px; /* Increased from 800px */
   margin: 50px auto;
   display: flex;
   align-items: center;
 }
 
 .slider {
-  display: flex;
   overflow: hidden;
   width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .slide {
@@ -21,11 +25,11 @@
 .slide > * {
   background-color: #007bff;
   color: white;
-  padding: 40px;
+  padding: 60px; /* Increased from 40px */
   border-radius: 10px;
   text-align: center;
-  font-size: 1.2rem;
-  height: 100%;
+  font-size: 1.4rem; /* Increased font size */
+  height: 200px; /* Set a specific height instead of 100% */
   box-sizing: border-box;
 }
 
