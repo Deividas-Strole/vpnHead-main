@@ -33,7 +33,9 @@ export default function Slider() {
 
   // Create an extended array for smooth infinite scrolling
   const extendedItems = [...items, ...items, ...items];
-  const translateX = -((currentIndex + items.length) * (100 / 3));
+  // Use pixel-based transform calculation
+  const slideWidth = 410; // Width of each slide (400px box + 10px padding)
+  const translateX = -((currentIndex + items.length) * slideWidth);
 
   return (
     <div className="slider-container">
@@ -43,7 +45,7 @@ export default function Slider() {
       <div className="slider">
         <div 
           className="slider-track" 
-          style={{ transform: `translateX(${translateX}%)` }}
+          style={{ transform: `translateX(${translateX}px)` }}
         >
           {extendedItems.map((item, index) => (
             <div className="slide" key={index}>
