@@ -26,7 +26,7 @@
 }
 
 .slide > * {
-  border: 10px solid #007bff; /* Changed to border instead of background */
+  border: 10px solid #E13C35;
   background-color: transparent; /* Make background transparent */
   color: #333; /* Changed text color to match red-box */
   padding: 16px; /* Match red-box padding */
