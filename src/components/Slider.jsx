@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../css/Slider.css";
 import ArticalSliderBox from "./ArticalSliderBox";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 export default function Slider() {
   const [articles, setArticles] = useState([]);
@@ -52,14 +54,15 @@ export default function Slider() {
           style={{ transform: `translateX(${translateX}px)` }}
         >
           {extendedItems.map((item, index) => (
-            <div
-              className="slide"
+            <Link
+              to={`/article/${item.id}`}
               key={index}
-              onClick={() => navigate(`/article/${item.id}`)}
-              style={{ cursor: "pointer" }}
+              className="slide"
+              style={{ cursor: "pointer", textDecoration: "none" }}
             >
               {item.element}
-            </div>
+            </Link>
+
           ))}
         </div>
       </div>
