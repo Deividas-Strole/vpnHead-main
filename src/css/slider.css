@@ -4,18 +4,21 @@
   margin: 50px auto;
   display: flex;
   align-items: center;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%;
+  transform: translateX(-50%); */
 }
 
 .slider {
   overflow: hidden;
   width: 100%;
+  position: relative;
+  margin: 0 auto;
 }
 
 .slider-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .slide {
@@ -36,7 +39,7 @@
   font-weight: bold; /* Match red-box font weight */
   font-family: Arial, sans-serif; /* Match red-box font family */
   width: 400px; /* Fixed width instead of max-width */
-  height: 200px; /* Fixed height */
+  height: 400px; /* Fixed height */
   box-sizing: border-box;
   margin: 5px; /* Match red-box margin */
   display: flex;
@@ -61,7 +64,7 @@
 }
 
 .left {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .right {

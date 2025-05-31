@@ -1,18 +1,32 @@
 .red-box {
-  border: 10px solid #43A260;
+  border: 10px solid #E13C35;
   padding: 16px;
   border-radius: 8px;
   color: #333;
-  max-width: 400px;
+  width: 400px;
+  height: 600px;
   margin: 5px;
   font-family: Arial, sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
+  box-sizing: border-box;
+  background-color: transparent;
   text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .red-box-image {
-  width: 100%;         /* Adjust as needed */
+  width: 100%;
   height: auto;
-  margin-bottom: 16px; /* Space between image and text */
+  max-height: 250px; /* Adjust if you want smaller */
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.red-box-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  word-wrap: break-word;
 }
