@@ -39,7 +39,7 @@
   font-weight: bold; /* Match red-box font weight */
   font-family: Arial, sans-serif; /* Match red-box font family */
   width: 400px; /* Fixed width instead of max-width */
-  height: 400px; /* Fixed height */
+  height: 600px; /* Fixed height */
   box-sizing: border-box;
   margin: 5px; /* Match red-box margin */
   display: flex;

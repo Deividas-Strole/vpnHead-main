@@ -24,22 +24,19 @@ export default function Slider() {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 2000);
+    const interval = setInterval(nextSlide, 3000); // Slower transition
     return () => clearInterval(interval);
   }, [articles]);
 
   if (articles.length === 0) return <p>Loading articles...</p>;
 
-  const handleClick = (id) => {
-    navigate(`/article/${id}`);
-  };
+  // Wrap each item with its id
+  const items = articles.map((article) => ({
+    id: article.id,
+    element: <ArticalSliderBox text={article.title} />,
+  }));
 
-  const items = articles.map((article) => (
-    <div onClick={() => handleClick(article.id)} key={article.id} style={{ cursor: "pointer" }}>
-      <ArticalSliderBox text={article.title} />
-    </div>
-  ));
-
+  // Repeat items for smooth looping
   const extendedItems = [...items, ...items, ...items];
   const slideWidth = 410;
   const translateX = -((currentIndex + items.length) * slideWidth);
@@ -50,13 +47,18 @@ export default function Slider() {
         &#8249;
       </button>
       <div className="slider">
-        <div 
-          className="slider-track" 
+        <div
+          className="slider-track"
           style={{ transform: `translateX(${translateX}px)` }}
         >
           {extendedItems.map((item, index) => (
-            <div className="slide" key={index}>
-              {item}
+            <div
+              className="slide"
+              key={index}
+              onClick={() => navigate(`/article/${item.id}`)}
+              style={{ cursor: "pointer" }}
+            >
+              {item.element}
             </div>
           ))}
         </div>
