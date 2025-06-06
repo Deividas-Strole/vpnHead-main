@@ -1,0 +1,46 @@
+/* Reset only inside the article page */
+.article-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.article-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+/* Header text */
+.article-header {
+  text-align: center;
+  color: #E13C35;
+  padding: 5% 2%;
+}
+
+/* Article content */
+.article-body {
+  flex: 1;
+  max-width: 66.6667%;
+  margin: 0 auto;
+  padding: 5%;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.article-title {
+  text-align: center;
+  color: #43A260;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Slider section */
+.article-slider-section {
+  text-align: center;
+  padding: 5%;
+  background-color: #f9f9f9;
+}
