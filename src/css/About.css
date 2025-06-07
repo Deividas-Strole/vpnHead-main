@@ -1,0 +1,139 @@
+/* Reset for the entire document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make sure HTML and body take full viewport */
+html, body {
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden;  */
+}
+
+/* Target your React root element */
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.about-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.about-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%; /* Viewport width */
+  /* height: 100vh; */
+  /* position: absolute;  */
+  top: 0;
+  left: 0;
+}
+
+.about-logo-wrapper {
+  padding: 20px; /* Add some padding for visibility */
+}
+
+.about-menu-wrapper {
+  padding: 30px; /* Add some padding for visibility */
+}
+
+/* Logo styling */
+.about-logo-image {
+  height: 100px;
+}
+
+/* Menu styling */
+.about-nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 260px;
+  margin: 0;
+  padding: 0;
+}
+
+.about-nav-menu li {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.50rem;        /* ✅ Increase font size (20px) */
+  font-family: sans-serif;   /* ✅ Use sans-serif font */
+}
+
+.about-section-title {
+  color: #43A260;
+  font-size: 2.5rem;
+  /* margin-bottom: 40px; */
+  padding: 4%;
+}
+
+/* Main content area */
+.about-vpn-info-section {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  font-size: 1.50rem;        /* ✅ Increase font size (20px) */
+  font-family: sans-serif;   /* ✅ Use sans-serif font */
+  max-width: 66.6667%;  /* ✅ Limit width to 2/3 of screen */
+  margin: 0 auto;       /* ✅ Center horizontally */
+}
+
+.about-page-heading {
+  text-align: center;
+  color: #E13C35;
+  padding-top: 5%;
+}
+
+.about-vpn-illustration {
+  max-width: 100%;
+  height: auto;
+  width: 500px; /* or set height: 300px; depending on your layout */
+  margin: 10px 0;
+}
+
+.about-vpn-benefits-section {
+  text-align: center;
+}
+
+.about-feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.about-feature-grid > * {
+  flex: 1 1 calc(33.33% - 20px); /* 3 items per row with space for gap */
+  max-width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+
+.about-vpn-provider-section {
+  text-align: center;
+  font-size: 1.50rem;        /* ✅ Increase font size (20px) */
+  font-family: sans-serif;
+}
+
+.about-articles-section {
+  text-align: center;
+  padding: 5%;
+  font-size: 1.50rem;        /* ✅ Increase font size (20px) */
+  font-family: sans-serif;   /* ✅ Use sans-serif font */
+  max-width: 66.6667%;  /* ✅ Limit width to 2/3 of screen */
+  margin: 0 auto;       /* ✅ Center horizontally */
+}
+
+.about-vpn-info-section p {
+  margin-bottom: 1.5rem; /* or use 20px, etc. */
+  line-height: 1.6;
+}
