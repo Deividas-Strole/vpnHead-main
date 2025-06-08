@@ -120,7 +120,7 @@ html, body {
 
 .articles-content {
   text-align: center;
-  padding: 5%;
+  padding: 0.3%;
   font-size: 1.50rem;        /* ✅ Increase font size (20px) */
   font-family: sans-serif;   /* ✅ Use sans-serif font */
   max-width: 66.6667%;  /* ✅ Limit width to 2/3 of screen */
