@@ -6,6 +6,8 @@ import surfshark from '../assets/surfshark.jpg';
 import Slider from '../components/Slider'; // Adjust path if necessary
 import Header from '../components/Header'; // Adjust path if necessary
 import ArticleHeadlines from '../components/ArticleHeadlines';
+import WhereGetVpn from '../components/WhereGetVpn';
+import '../css/WhereGetVpn.css'; // Assuming your CSS file is named WhereGetVpn.css
 
 const Library = () => {
     return (
@@ -24,11 +26,7 @@ const Library = () => {
 
 
             <div className="where-get-vpn-content">
-                <h1 className="headline">Where do You Get VPN?</h1>
-                <p>We highly recommend Surfshark - best service for $1.99 per month!!!</p>
-                <a href="https://get.surfshark.net/aff_c?offer_id=926&aff_id=38520" target="_blank" rel="noopener noreferrer">
-                    <img src={surfshark} alt="SurfShark" className="surfshark-image" />
-                </a>
+                <WhereGetVpn />
             </div>
 
 

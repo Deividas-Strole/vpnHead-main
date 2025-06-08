@@ -5,6 +5,8 @@ import RedBox from '../components/VpnRedBox';
 import surfshark from '../assets/surfshark.jpg';
 import Slider from '../components/Slider';
 import Header from '../components/Header'; // ← Import new component
+import WhereGetVpn from '../components/WhereGetVpn';
+import '../css/WhereGetVpn.css'; // Assuming your CSS file is named WhereGetVpn.css
 
 const About = () => {
     return (
@@ -34,12 +36,8 @@ const About = () => {
                     In short, we like VPNs because they give us freedom, security, and control—three things that matter more than ever in the digital age.</p>
             </div>
 
-            <div className="about-vpn-provider-section">
-                <h1 className="about-section-title">Where do You Get VPN?</h1>
-                <p>We highly reccomend Surfshark - best service for $1.99 per month!!!</p>
-                <a href="https://get.surfshark.net/aff_c?offer_id=926&aff_id=38520" target="_blank" rel="noopener noreferrer">
-                    <img src={surfshark} alt="SurfShark" className="surfshark-image" />
-                </a>
+            <div className="where-get-vpn-content">
+                <WhereGetVpn />
             </div>
 
 

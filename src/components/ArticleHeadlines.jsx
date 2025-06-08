@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../css/Home.css"; // Make sure styles are included
+import "../css/articleheadlines.css"; // Updated CSS path
 
 export default function ArticleHeadlines() {
     const [articles, setArticles] = useState([]);
@@ -15,15 +15,15 @@ export default function ArticleHeadlines() {
     if (articles.length === 0) return <p>Loading articles...</p>;
 
     return (
-        <div className="red-box-row">
+        <div className="article-headlines-container">
             {articles.map((article) => (
                 <Link
                     to={`/article/${article.id}`}
                     key={article.id}
                     style={{ textDecoration: "none", color: "inherit" }}
                 >
-                    <div className="red-box">
-                        <p>{article.title}</p>
+                    <div className="article-box">
+                        <p className="article-box-title">{article.title}</p>
                     </div>
                 </Link>
             ))}

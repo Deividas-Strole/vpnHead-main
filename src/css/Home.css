@@ -118,12 +118,6 @@ html, body {
   box-sizing: border-box;
 }
 
-.where-get-vpn-content {
-  text-align: center;
-   font-size: 1.50rem;        /* ✅ Increase font size (20px) */
-  font-family: sans-serif;
-}
-
 .articles-content {
   text-align: center;
   padding: 5%;

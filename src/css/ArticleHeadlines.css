@@ -1,17 +1,43 @@
-.red-box {
-  background-color: #ffcccc; /* Light red background */
-  border: 2px solid red; /* Red border */
-  padding: 10px;
-  margin: 10px;
-  width: 300px; /* Adjust width as needed */
+.article-box {
+  border: 10px solid #E13C35;
+  padding: 16px;
+  border-radius: 8px;
+  color: #333;
+  width: 400px;
+  height: 600px;
+  margin: 5px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: transparent;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
-.red-box p {
-  margin: 0; /* Remove default paragraph margin */
+.article-box p {
+  margin: 0;
+}
+
+.article-box-image {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.article-box-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  word-wrap: break-word;
 }
 
 .article-headlines-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
