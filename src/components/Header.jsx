@@ -16,7 +16,7 @@ const Header = () => {
         <nav className="nav-menu">
           <ul>
             <li onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>Home</li>
-            <li>Library</li>
+            <li onClick={() => navigate('/library')} style={{ cursor: 'pointer' }}>Library</li>
             <li onClick={() => navigate('/about')} style={{ cursor: 'pointer' }}>About</li>
           </ul>
         </nav>
