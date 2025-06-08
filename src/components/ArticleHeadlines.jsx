@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/articleheadlines.css"; // Updated CSS path
+import shieldIcon from '../assets/vpnWorld.png';
+
 
 export default function ArticleHeadlines() {
     const [articles, setArticles] = useState([]);
@@ -23,6 +25,7 @@ export default function ArticleHeadlines() {
                     style={{ textDecoration: "none", color: "inherit" }}
                 >
                     <div className="article-box">
+                        <img src={shieldIcon} alt="Shield" className="article-box-image" />
                         <p className="article-box-title">{article.title}</p>
                     </div>
                 </Link>

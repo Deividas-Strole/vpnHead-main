@@ -1,37 +1,33 @@
 import React from 'react';
-import '../css/Home.css'; // Assuming your renamed CSS file is imported here
 import whatIsVPN from '../assets/whatIsVpn.png';
-import RedBox from '../components/VpnRedBox'; // Adjust path if necessary
+import RedBox from '../components/VpnRedBox';
 import surfshark from '../assets/surfshark.jpg';
-import Slider from '../components/Slider'; // Adjust path if necessary
-import Header from '../components/Header'; // Adjust path if necessary
+import Slider from '../components/Slider';
+import Header from '../components/Header';
 import ArticleHeadlines from '../components/ArticleHeadlines';
 import WhereGetVpn from '../components/WhereGetVpn';
-import '../css/WhereGetVpn.css'; // Assuming your CSS file is named WhereGetVpn.css
+import '../css/Library.css';
 
 const Library = () => {
     return (
-        <div className="home-container">
+        <div className="library-container">
             <Header />
 
-            <div className="what-is-vpn-content">
-                <h1 className="headline">Library</h1>
-
+            <div className="library-title">
+                <h1>Library</h1>
             </div>
 
-            <div className="App">
+            <div className="library-description">
+                <h1 className="library-headline">Reading makes you happier—and that's a fact!</h1>
+            </div>
+
+            <div className="library-articles">
                 <ArticleHeadlines />
             </div>
 
-
-
-            <div className="where-get-vpn-content">
+            <div className="library-where-to-get">
                 <WhereGetVpn />
             </div>
-
-
-
-
         </div>
     );
 };

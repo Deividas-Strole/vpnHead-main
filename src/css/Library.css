@@ -5,52 +5,45 @@
   box-sizing: border-box;
 }
 
-/* Make sure HTML and body take full viewport */
 html, body {
   width: 100%;
   height: 100%;
-  /* overflow: hidden;  */
 }
 
-/* Target your React root element */
 #root {
   width: 100%;
   height: 100%;
 }
 
-.home-container {
-  display:flex;
+.library-container {
+  display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
 }
 
-.header-container {
+.library-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%; /* Viewport width */
-  /* height: 100vh; */
-  /* position: absolute;  */
+  width: 100%;
   top: 0;
   left: 0;
 }
 
-.logo-container {
-  padding: 20px; /* Add some padding for visibility */
+.library-logo {
+  padding: 20px;
 }
 
-.menu-container {
-  padding: 30px; /* Add some padding for visibility */
+.library-menu {
+  padding: 30px;
 }
 
-/* Logo styling */
-.logo {
+.library-logo-img {
   height: 100px;
 }
 
-/* Menu styling */
-.nav-menu ul {
+.library-nav-menu ul {
   list-style: none;
   display: flex;
   gap: 260px;
@@ -58,22 +51,22 @@ html, body {
   padding: 0;
 }
 
-.nav-menu li {
+.library-nav-menu li {
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.50rem;        /* ✅ Increase font size (20px) */
-  font-family: sans-serif;   /* ✅ Use sans-serif font */
+  font-size: 1.5rem;
+  font-family: sans-serif;
 }
 
-.headline {
+.library-headline {
   color: #43A260;
   font-size: 2.5rem;
-  /* margin-bottom: 40px; */
   padding: 4%;
+    white-space: nowrap; 
+
 }
 
-/* Main content area */
-.what-is-vpn-content {
+.library-description {
   text-align: center;
   flex: 1;
   display: flex;
@@ -81,30 +74,30 @@ html, body {
   justify-content: center;
   align-items: center;
   padding: 5%;
-  font-size: 1.50rem;        /* ✅ Increase font size (20px) */
-  font-family: sans-serif;   /* ✅ Use sans-serif font */
-  max-width: 66.6667%;  /* ✅ Limit width to 2/3 of screen */
-  margin: 0 auto;       /* ✅ Center horizontally */
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.heading-text {
+.library-title {
   text-align: center;
   color: #E13C35;
   padding-top: 5%;
 }
 
-.whatIsVPN-image {
+.library-image {
   max-width: 100%;
   height: auto;
-  width: 500px; /* or set height: 300px; depending on your layout */
+  width: 500px;
   margin: 10px 0;
 }
 
-.why-you-need-vpn-content {
+.library-reasons {
   text-align: center;
 }
 
-.red-box-row {
+.library-box-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -112,41 +105,40 @@ html, body {
   margin: 20px 0;
 }
 
-.red-box-row > * {
-  flex: 1 1 calc(33.33% - 20px); /* 3 items per row with space for gap */
+.library-box-row > * {
+  flex: 1 1 calc(33.33% - 20px);
   max-width: calc(33.33% - 20px);
   box-sizing: border-box;
 }
 
-.where-get-vpn-content {
+.library-where-to-get {
   text-align: center;
-  font-size: 1.50rem;        /* ✅ Increase font size (20px) */
+  font-size: 1.5rem;
   font-family: sans-serif;
 }
 
-.articles-content {
+.library-articles {
   text-align: center;
-  padding: 5%;
-  font-size: 1.50rem;        /* ✅ Increase font size (20px) */
-  font-family: sans-serif;   /* ✅ Use sans-serif font */
-  max-width: 66.6667%;  /* ✅ Limit width to 2/3 of screen */
-  margin: 0 auto;       /* ✅ Center horizontally */  
+  padding: 1%;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-.red-box {
+.library-box {
   background-color: #ffe5e5;
   border: 2px solid red;
-  padding: 10px;                  /* ✅ Padding inside the red box */
+  padding: 10px;
   text-align: center;
   font-size: 1.2rem;
   border-radius: 8px;
-  width: 100%;                    /* Let flexbox control the width */
+  width: 100%;
   box-sizing: border-box;
   transition: transform 0.2s ease;
 }
 
-.red-box:hover {
+.library-box:hover {
   transform: scale(1.03);
   cursor: pointer;
 }
-
