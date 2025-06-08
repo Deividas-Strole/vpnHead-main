@@ -17,6 +17,11 @@ const Library = () => {
 
             </div>
 
+            <div className="App">
+                <ArticleHeadlines />
+            </div>
+
+
 
             <div className="where-get-vpn-content">
                 <h1 className="headline">Where do You Get VPN?</h1>
@@ -26,16 +31,8 @@ const Library = () => {
                 </a>
             </div>
 
-            <div className="App">
-                {/* Other components or content */}
-                <ArticleHeadlines />
-                {/* Other components or content */}
-            </div>
 
-            {/* <div className="articles-content">
-                <h1 className="headline">Articles</h1>
-                <Slider />
-            </div> */}
+
 
         </div>
     );
