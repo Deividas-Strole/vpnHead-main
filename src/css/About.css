@@ -11,6 +11,9 @@ html, body {
   height: 100%;
   /* overflow: hidden;  */
 }
+p {
+  padding-bottom: 1.5rem; /* or use 20px, etc. */
+}
 
 /* Target your React root element */
 #root {
@@ -80,7 +83,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5%;
   font-size: 1.50rem;        /* ✅ Increase font size (20px) */
   font-family: sans-serif;   /* ✅ Use sans-serif font */
   max-width: 66.6667%;  /* ✅ Limit width to 2/3 of screen */
@@ -134,6 +136,7 @@ html, body {
 }
 
 .about-vpn-info-section p {
-  margin-bottom: 1.5rem; /* or use 20px, etc. */
+  margin-bottom: 0rem; /* or use 20px, etc. */
   line-height: 1.6;
 }
+

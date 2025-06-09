@@ -6,7 +6,7 @@ import surfshark from '../assets/surfshark.jpg';
 import Slider from '../components/Slider';
 import Header from '../components/Header'; // ← Import new component
 import WhereGetVpn from '../components/WhereGetVpn';
-import '../css/WhereGetVpn.css'; // Assuming your CSS file is named WhereGetVpn.css
+// import '../css/WhereGetVpn.css'; // Assuming your CSS file is named WhereGetVpn.css
 
 const About = () => {
     return (
@@ -18,7 +18,7 @@ const About = () => {
             </div>
 
             <div className="about-vpn-info-section">
-                <h1 className="about-section-title">My name is Deividas Strole and I love VPNS!</h1>
+                <h1 className="about-section-title">My name is Deividas Strole and I love VPNs!</h1>
                 <img src="https://res.cloudinary.com/dxubasgtx/image/upload/v1749265085/1715136212308_dzz51o.jpg" alt="Deividas Strole" className="about-vpn-illustration" />
                 <br></br>
                 <p>In today’s digital world, where privacy and security are constantly under threat, VPNs (Virtual Private Networks) have become essential tools for everyday internet users. Whether you're streaming your favorite shows, working remotely, or just browsing the web, VPNs offer a wide range of benefits that make them incredibly appealing.
@@ -36,7 +36,7 @@ const About = () => {
                     In short, we like VPNs because they give us freedom, security, and control—three things that matter more than ever in the digital age.</p>
             </div>
 
-            <div className="where-get-vpn-content">
+            <div>
                 <WhereGetVpn />
             </div>
 
