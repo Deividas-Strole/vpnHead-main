@@ -8,6 +8,7 @@ export default function ArticleHeadlines() {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
+        // for prod: "/api/articles/titles" no 8080...
         fetch("http://localhost:8080/api/articles/titles")
             .then((res) => res.json())
             .then((data) => setArticles(data))

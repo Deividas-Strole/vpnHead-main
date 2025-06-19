@@ -11,6 +11,7 @@ export default function Slider() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // for prod: fetch("/api/articles/titles")
     fetch("http://localhost:8080/api/articles/titles")
       .then((res) => res.json())
       .then((data) => setArticles(data))

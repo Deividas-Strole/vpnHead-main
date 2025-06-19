@@ -9,6 +9,7 @@ const Article = () => {
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
+    // For production, use the relative path without port
     fetch(`http://localhost:8080/api/articles/${id}`)
       .then((res) => res.json())
       .then((data) => setArticle(data))
