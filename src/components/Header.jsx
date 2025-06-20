@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/vpnHeadLogo.png';
 import '../css/Home.css';
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   const navigate = useNavigate();
@@ -9,7 +11,9 @@ const Header = () => {
   return (
     <div className="header-container">
       <div className="logo-container">
-        <img src={logo} alt="VPN Logo" className="logo" />
+        <Link to="/admin/login" style={{ fontSize: '24px', color: 'blue' }}>
+          <img src={logo} alt="VPN Logo" className="logo" />
+        </Link>
       </div>
 
       <div className="menu-container">

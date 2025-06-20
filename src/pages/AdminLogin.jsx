@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
+import '../css/AdminLogin.css';
+
 
 function AdminLogin() {
     const [username, setUsername] = useState("");
@@ -33,6 +36,8 @@ function AdminLogin() {
 
     return (
         <div>
+            <Header />
+
             <h2>Admin Login</h2>
             <form onSubmit={handleLogin}>
                 <input

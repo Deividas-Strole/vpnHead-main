@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this for vertical centering */
+}
+
+.login-box {
+    border: 2px solid red;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+}
+
+.login-box input,
+.login-box button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}

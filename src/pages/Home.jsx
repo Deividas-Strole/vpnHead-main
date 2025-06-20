@@ -7,22 +7,24 @@ import Slider from '../components/Slider';
 import Header from '../components/Header'; // ← Import new component
 import WhereGetVpn from '../components/WhereGetVpn';
 import '../css/WhereGetVpn.css'; // Assuming your CSS file is named WhereGetVpn.css
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 const Home = () => {
   return (
     <div className="home-container">
+      <Header />
+
 
       <div className="heading-text">
         <h1>VPNs Are All We Think About.</h1>
       </div>
 
-      <div>
+      {/* <div>
         <Link to="/admin/login" style={{ fontSize: '24px', color: 'blue' }}>
           Go to Admin Login
         </Link>
-      </div>
+      </div> */}
 
       <div className="what-is-vpn-content">
         <h1 className="headline">What is VPN?</h1>

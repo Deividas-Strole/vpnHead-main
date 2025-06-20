@@ -5,13 +5,13 @@ import About from './pages/About';
 import Library from './pages/Library';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
-import Header from './components/Header';
+// import Header from './components/Header';
 
 
 function App() {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/article/:id" element={<Article />} />
