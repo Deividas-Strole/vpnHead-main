@@ -1,62 +1,41 @@
-import React, { useState } from "react";
+// pages/AdminLogin.jsx
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
-import '../css/AdminLogin.css';
+import AdminLoginForm from "../components/AdminLoginForm";
+import "../css/AdminLogin.css";
 
-
-function AdminLogin() {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [error, setError] = useState(null);
+export default function AdminLogin() {
     const navigate = useNavigate();
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
-
+    const handleLogin = async (username, password) => {
         const credentials = btoa(`${username}:${password}`);
-        try {
-            const res = await fetch("http://localhost:8080/admin", {
-                method: "GET", // any protected request
-                headers: {
-                    "Authorization": `Basic ${credentials}`,
-                },
-            });
 
-            if (res.ok) {
-                // Save credentials in localStorage or context (careful with security!)
-                localStorage.setItem("auth", `Basic ${credentials}`);
-                navigate("/admin/dashboard");
-            } else {
-                setError("Login failed. Check your credentials.");
-            }
-        } catch (err) {
-            setError("Error during login. Please try again.");
+        const res = await fetch("http://localhost:8080/admin", {
+            method: "GET",
+            headers: {
+                Authorization: `Basic ${credentials}`,
+            },
+        });
+
+        if (res.ok) {
+            localStorage.setItem("auth", `Basic ${credentials}`);
+            navigate("/admin/dashboard");
+        } else {
+            throw new Error("Login failed. Check your credentials.");
         }
     };
 
     return (
         <div>
             <Header />
+            <div className="login-heading-text">
+                <h1>Only the one with the secret will be allowed in!</h1>
+            </div>
 
-            <h2>Admin Login</h2>
-            <form onSubmit={handleLogin}>
-                <input
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <button type="submit">Login</button>
-            </form>
-            {error && <p style={{ color: "red" }}>{error}</p>}
+            <div className="admin-login-container">
+                <AdminLoginForm onLogin={handleLogin} />
+            </div>
         </div>
     );
 }
-
-export default AdminLogin;

@@ -1,19 +1,16 @@
-.container {
+.login-heading-text {
+  text-align: center;
+  color: #E13C35;
+  margin-top: 6rem;  /* Replace padding-top with margin */
+  margin-bottom: 0rem; /* Add small space below heading */
+  /* padding-top: 5%; */
+}
+
+.admin-login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust this for vertical centering */
+    /* height: 100vh;  */
 }
 
-.login-box {
-    border: 2px solid red;
-    padding: 20px;
-    width: 300px; /* Adjust width as needed */
-}
 
-.login-box input,
-.login-box button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
