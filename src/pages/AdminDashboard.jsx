@@ -4,8 +4,8 @@ import React from 'react';
 const AdminDashboard = () => {
     return (
         <div>
-            <h1>Sample AdminDashboard</h1>
-            <p>This is a sample AdminDashboard</p>
+            <h1>AdminDashboard</h1>
+            <p>AdminDashboard content</p>
         </div>
     );
 }
