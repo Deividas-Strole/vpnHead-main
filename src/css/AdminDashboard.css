@@ -1,0 +1,10 @@
+/* AdminDashboard.css */
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;  vertical center */
+  align-items: center;      /* horizontal center */
+  height: 100vh;
+  text-align: center;
+  padding-top: 1rem;
+}
