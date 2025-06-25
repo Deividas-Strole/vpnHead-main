@@ -5,6 +5,7 @@ import About from './pages/About';
 import Library from './pages/Library';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
+import ArticleEditor from './pages/ArticleEditor';
 // import Header from './components/Header';
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/article-editor" element={<ArticleEditor />} />
       </Routes>
     </Router>
   );
