@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const CLOUDINARY_UPLOAD_URL = "https://api.cloudinary.com/v1_1/YOUR_CLOUD_NAME/image/upload";
-const UPLOAD_PRESET = "YOUR_UNSIGNED_PRESET";
+const CLOUDINARY_UPLOAD_URL = "https://api.cloudinary.com/v1_1/dxubasgtx/image/upload";
+const UPLOAD_PRESET = "VpnHead";
 
 const ArticleEditor = () => {
     const [title, setTitle] = useState("");
@@ -32,7 +32,8 @@ const ArticleEditor = () => {
         try {
             const imageUrl = await uploadToCloudinary(file);
             const newParas = [...paragraphs];
-            newParas.splice(selectedParaIndex + 1, 0, `[image:${imageUrl}]`);
+            newParas.splice(selectedParaIndex + 1, 0, `/n/n ${imageUrl} /n/n`);
+            // newParas.splice(selectedParaIndex + 1, 0, `[image:${imageUrl}]`);
             const newText = newParas.join("\n\n");
             setText(newText);
             setParagraphs(newParas);
