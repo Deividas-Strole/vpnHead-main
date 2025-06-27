@@ -9,20 +9,25 @@ export default function AdminLogin() {
     const navigate = useNavigate();
 
     const handleLogin = async (username, password) => {
-        const credentials = btoa(`${username}:${password}`);
+        try {
+            const res = await fetch("http://localhost:8080/api/auth/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ username, password }),
+            });
 
-        const res = await fetch("http://localhost:8080/admin", {
-            method: "GET",
-            headers: {
-                Authorization: `Basic ${credentials}`,
-            },
-        });
+            if (!res.ok) {
+                throw new Error("Login failed. Check your credentials.");
+            }
 
-        if (res.ok) {
-            localStorage.setItem("auth", `Basic ${credentials}`);
-            navigate("/admin/dashboard");
-        } else {
-            throw new Error("Login failed. Check your credentials.");
+            const data = await res.json();
+            localStorage.setItem("token", data.token); // store JWT token
+            navigate("/admin/dashboard"); // navigate only after successful login
+        } catch (err) {
+            console.error(err);
+            alert("Login failed. Check your credentials.");
         }
     };
 
