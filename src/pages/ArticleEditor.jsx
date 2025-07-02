@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
+import api from "../axiosConfig";
 
 const CLOUDINARY_UPLOAD_URL = "https://api.cloudinary.com/v1_1/dxubasgtx/image/upload";
 const UPLOAD_PRESET = "VpnHead";
+
+const isImageUrl = (text) => {
+    const trimmed = text.trim();
+    return trimmed.match(/^https?:\/\/(?:[\w-]+\.)+[\w-]+(?:\/[\w-]*)*\.(?:png|jpg|jpeg|gif|webp)$/i);
+};
 
 const ArticleEditor = () => {
     const [title, setTitle] = useState("");
@@ -17,6 +23,7 @@ const ArticleEditor = () => {
         setText(val); // sync original text
     };
 
+    // Keep using axios for Cloudinary uploads since it's a third-party service
     const uploadToCloudinary = async (file) => {
         const formData = new FormData();
         formData.append("file", file);
@@ -32,8 +39,7 @@ const ArticleEditor = () => {
         try {
             const imageUrl = await uploadToCloudinary(file);
             const newParas = [...paragraphs];
-            newParas.splice(selectedParaIndex + 1, 0, `/n/n ${imageUrl} /n/n`);
-            // newParas.splice(selectedParaIndex + 1, 0, `[image:${imageUrl}]`);
+            newParas.splice(selectedParaIndex + 1, 0, imageUrl);
             const newText = newParas.join("\n\n");
             setText(newText);
             setParagraphs(newParas);
@@ -60,7 +66,8 @@ const ArticleEditor = () => {
         }
 
         try {
-            await axios.post("http://localhost:8080/admin/save-article", {
+            // Use api instance for backend calls instead of axios
+            await api.post("/api/articles", {
                 title,
                 content: text,
                 imageUrl: featuredImage,
@@ -113,9 +120,9 @@ const ArticleEditor = () => {
                             }`}
                         onClick={() => setSelectedParaIndex(idx)}
                     >
-                        {para.startsWith("[image:") ? (
+                        {isImageUrl(para) ? (
                             <img
-                                src={para.replace("[image:", "").replace("]", "")}
+                                src={para.trim()}
                                 alt="Inserted"
                                 className="max-w-full h-auto rounded"
                             />

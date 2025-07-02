@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './axiosConfig'; // Import axios configuration
 import Home from './pages/Home';
 import Article from './pages/Article';
 import About from './pages/About';
@@ -7,7 +8,6 @@ import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import ArticleEditor from './pages/ArticleEditor';
 // import Header from './components/Header';
-
 
 function App() {
   return (
@@ -27,22 +27,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Home from './pages/Home';
-// import Article from './pages/Article';
-
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/article/:id" element={<Article />} /> {/* dynamic route */}
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
