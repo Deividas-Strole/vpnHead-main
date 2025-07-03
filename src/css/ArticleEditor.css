@@ -1,0 +1,68 @@
+/* src/components/ArticleEditor.css */
+
+.editor-container {
+    padding: 1rem;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  
+  .editor-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .editor-input,
+  .editor-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .editor-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .editor-file-input {
+    margin-bottom: 1rem;
+  }
+  
+  .editor-image,
+  .editor-inserted-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  
+  .editor-paragraphs {
+    margin-bottom: 1rem;
+  }
+  
+  .editor-paragraph {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .editor-paragraph.selected {
+    background-color: #e0f2ff;
+  }
+  
+  .editor-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
