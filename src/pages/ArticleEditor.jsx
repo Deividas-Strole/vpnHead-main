@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import api from "../axiosConfig";
-import "./ArticleEditor.css"; // Import the CSS file
+import "../css/ArticleEditor.css"; // Import the CSS file
 
 const CLOUDINARY_UPLOAD_URL = "https://api.cloudinary.com/v1_1/dxubasgtx/image/upload";
 const UPLOAD_PRESET = "VpnHead";
