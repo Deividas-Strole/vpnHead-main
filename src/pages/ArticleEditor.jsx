@@ -87,7 +87,7 @@ const ArticleEditor = () => {
 
   return (
     <div className="editor-container">
-      <h2 className="editor-heading">Create New Article</h2>
+      <h1 className="editor-heading">Create New Article</h1>
 
       <input
         type="text"

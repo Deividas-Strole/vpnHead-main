@@ -4,12 +4,15 @@
     padding: 1rem;
     max-width: 768px;
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
   }
   
   .editor-heading {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: #E13C35;
   }
   
   .editor-input,
@@ -17,9 +20,10 @@
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
+    border-color: #43A260;
     margin-bottom: 1rem;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;    
   }
   
   .editor-label {
@@ -57,7 +61,7 @@
   }
   
   .editor-button {
-    background-color: #2563eb;
+    background-color: #43A260;
     color: white;
     padding: 0.5rem 1.5rem;
     border: none;
