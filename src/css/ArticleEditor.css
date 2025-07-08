@@ -1,5 +1,3 @@
-/* src/components/ArticleEditor.css */
-
 .editor-container {
     padding: 1rem;
     max-width: 768px;
@@ -9,10 +7,11 @@
   }
   
   .editor-heading {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #E13C35;
+    /* color: #E13C35; */
+    color: blue;
   }
   
   .editor-input,
