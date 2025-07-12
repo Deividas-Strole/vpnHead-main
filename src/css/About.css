@@ -32,8 +32,6 @@ p {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%; /* Viewport width */
-  /* height: 100vh; */
-  /* position: absolute;  */
   top: 0;
   left: 0;
 }
