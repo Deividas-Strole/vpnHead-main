@@ -1,9 +1,11 @@
 // src/components/ArticleEditor.jsx
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import api from "../axiosConfig";
 import "../css/ArticleEditor.css"; // Import the CSS file
+import { useNavigate } from "react-router-dom"; // Add this import
+
 
 const CLOUDINARY_UPLOAD_URL = "https://api.cloudinary.com/v1_1/dxubasgtx/image/upload";
 const UPLOAD_PRESET = "VpnHead";
@@ -19,6 +21,7 @@ const ArticleEditor = () => {
   const [paragraphs, setParagraphs] = useState([]);
   const [selectedParaIndex, setSelectedParaIndex] = useState(null);
   const [featuredImage, setFeaturedImage] = useState(null);
+  const contentImageInputRef = useRef(null);
 
   const handleSplitText = (val) => {
     const paras = val.split("\n\n");
@@ -47,6 +50,11 @@ const ArticleEditor = () => {
       setParagraphs(newParas);
     } catch (err) {
       console.error("Upload failed", err);
+    } finally {
+      // Reset file input so user can upload again
+      if (contentImageInputRef.current) {
+        contentImageInputRef.current.value = "";
+      }
     }
   };
 
@@ -83,6 +91,11 @@ const ArticleEditor = () => {
       console.error(err);
       alert("Failed to submit article.");
     }
+  };
+
+  const navigate = useNavigate();
+  const cancelSubmit = () => {
+    navigate('/admin/dashboard');
   };
 
   return (
@@ -129,10 +142,19 @@ const ArticleEditor = () => {
         ))}
       </div>
 
-      <input type="file" onChange={handleContentImageUpload} className="editor-file-input" />
+      <input
+        type="file"
+        onChange={handleContentImageUpload}
+        className="editor-file-input"
+        ref={contentImageInputRef}
+      />
 
-      <button className="editor-button" onClick={handleSubmit}>
+      <button className="submit-button" onClick={handleSubmit}>
         Submit Article
+      </button>
+
+      <button className="cancel-button" onClick={cancelSubmit}>
+        Cancel
       </button>
     </div>
   );

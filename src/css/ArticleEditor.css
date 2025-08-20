@@ -59,7 +59,7 @@
     background-color: #e0f2ff;
   }
   
-  .editor-button {
+  .submit-button {
     background-color: #43A260;
     color: white;
     padding: 0.5rem 1.5rem;
@@ -68,4 +68,15 @@
     font-size: 1rem;
     cursor: pointer;
   }
-  
+
+  .cancel-button {
+    background-color: #E13C35;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+
