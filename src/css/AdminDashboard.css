@@ -1,4 +1,7 @@
 /* AdminDashboard.css */
+h1 {
+  color: #E13C35;
+}
 .centered-container {
   display: flex;
   flex-direction: column;
