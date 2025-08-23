@@ -9,9 +9,10 @@
   .editor-heading {
     /* font-size: 1.5rem; */
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     /* color: #E13C35; */
-    color: blue;
+    color: #E13C35;
+    text-align: center;
   }
   
   .editor-input,
