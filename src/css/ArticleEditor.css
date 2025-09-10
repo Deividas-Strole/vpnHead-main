@@ -15,7 +15,18 @@
     text-align: center;
   }
   
-  .editor-input,
+  .editor-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-color: #43A260;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;  
+  }
+
+
+
   .editor-textarea {
     width: 100%;
     padding: 0.5rem;
@@ -23,7 +34,9 @@
     border-color: #43A260;
     margin-bottom: 1rem;
     border-radius: 8px;
-    font-size: 1rem;    
+    font-size: 1rem;  
+    width: 736.1px;
+    height: 500px;  
   }
   
   .editor-label {
