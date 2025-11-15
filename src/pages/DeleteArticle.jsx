@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import api from "../axiosConfig";
 import "../css/AdminDashboard.css";
 
 const DeleteArticle = () => {
+    const navigate = useNavigate();
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -206,6 +208,31 @@ const DeleteArticle = () => {
                         </table>
                     </div>
                 )}
+            </div>
+
+            <div style={{ textAlign: "center", marginTop: "2rem", marginBottom: "2rem" }}>
+                <button
+                  onClick={() => navigate("/admin/dashboard")}
+                  style={{
+                    backgroundColor: "#dc3545",
+                    color: "white",
+                    border: "none",
+                    padding: "0.75rem 1.5rem",
+                    borderRadius: "5px",
+                    cursor: "pointer",
+                    fontSize: "1rem",
+                    fontWeight: "500",
+                    transition: "background-color 0.3s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = "#c82333";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = "#dc3545";
+                  }}
+                >
+                  Go Back
+                </button>
             </div>
         </div>
     );
