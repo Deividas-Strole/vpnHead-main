@@ -212,30 +212,30 @@ const DeleteArticle = () => {
 
             <div style={{ textAlign: "center", marginTop: "2rem", marginBottom: "2rem" }}>
                 <button
-                  onClick={() => navigate("/admin/dashboard")}
-                  style={{
-                    backgroundColor: "#dc3545",
-                    color: "white",
-                    border: "none",
-                    padding: "0.75rem 1.5rem",
-                    borderRadius: "5px",
-                    cursor: "pointer",
-                    fontSize: "1rem",
-                    fontWeight: "500",
-                    transition: "background-color 0.3s",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = "#c82333";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = "#dc3545";
-                  }}
+                    onClick={() => navigate("/admin/dashboard")}
+                    style={{
+                        backgroundColor: "#dc3545",
+                        color: "white",
+                        border: "none",
+                        padding: "0.75rem 1.5rem",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontSize: "1rem",
+                        fontWeight: "500",
+                        transition: "background-color 0.3s",
+                    }}
+                    onMouseEnter={(e) => {
+                        e.target.style.backgroundColor = "#c82333";
+                    }}
+                    onMouseLeave={(e) => {
+                        e.target.style.backgroundColor = "#dc3545";
+                    }}
                 >
-                  Go Back
+                    Go Back
                 </button>
             </div>
         </div>
     );
 };
-
+// 
 export default DeleteArticle;
