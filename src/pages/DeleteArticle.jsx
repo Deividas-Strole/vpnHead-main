@@ -237,5 +237,5 @@ const DeleteArticle = () => {
         </div>
     );
 };
-// 
+
 export default DeleteArticle;
